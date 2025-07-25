@@ -1,0 +1,198 @@
+.data-table-wrapper {
+  position: relative;
+}
+
+.data-table-wrapper.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  background: white;
+  overflow: auto;
+}
+
+.data-table-fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  background: white;
+  overflow: auto;
+}
+
+.data-table-card {
+  height: 100%;
+}
+
+.data-table-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.data-table-wrapper.fullscreen .ant-table-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.data-table-wrapper.fullscreen .ant-table {
+  height: 100%;
+}
+
+.data-table-wrapper.fullscreen .ant-table-container {
+  height: calc(100% - 64px);
+}
+
+.data-table-wrapper.fullscreen .ant-table-body {
+  height: 100%;
+  overflow: auto;
+}
+
+/* Custom scrollbar for table */
+.data-table-wrapper .ant-table-body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.data-table-wrapper .ant-table-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.data-table-wrapper .ant-table-body::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.data-table-wrapper .ant-table-body::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Row hover effects */
+.data-table-wrapper .ant-table-tbody > tr:hover > td {
+  background-color: #f5f5f5 !important;
+}
+
+.data-table-wrapper .ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: #e6f7ff !important;
+}
+
+/* Action buttons styling */
+.data-table-wrapper .ant-table-tbody .ant-btn {
+  margin: 0 2px;
+}
+
+/* Quick view trigger styling */
+.data-table-wrapper [data-quick-view] {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.data-table-wrapper [data-quick-view]:hover {
+  color: #1890ff;
+}
+
+/* Filter indicators */
+.data-table-wrapper .ant-table-filter-trigger-container .ant-table-filter-trigger {
+  color: #1890ff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .data-table-wrapper .ant-table {
+    font-size: 12px;
+  }
+  
+  .data-table-wrapper .ant-table-thead > tr > th,
+  .data-table-wrapper .ant-table-tbody > tr > td {
+    padding: 8px 4px;
+  }
+  
+  .data-table-wrapper .ant-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+/* Loading state */
+.data-table-wrapper .ant-spin-container {
+  min-height: 200px;
+}
+
+/* Empty state */
+.data-table-wrapper .ant-empty {
+  margin: 40px 0;
+}
+
+/* Selection info bar */
+.data-table-selection-info {
+  background: #e6f7ff;
+  border: 1px solid #91d5ff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Bulk action buttons */
+.data-table-bulk-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Column settings dropdown */
+.data-table-column-settings {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.data-table-column-settings .ant-checkbox-wrapper {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Advanced filters */
+.data-table-filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.data-table-filter-item {
+  min-width: 200px;
+}
+
+/* Animations */
+.data-table-wrapper .ant-table-tbody > tr {
+  transition: background-color 0.2s ease;
+}
+
+.data-table-wrapper .fullscreen-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.data-table-wrapper .fullscreen-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.data-table-wrapper .fullscreen-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.data-table-wrapper .fullscreen-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+} 

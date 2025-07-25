@@ -1,0 +1,340 @@
+.page-wrapper {
+  min-height: 100vh;
+  background: #f0f2f5;
+  padding: 24px;
+}
+
+.page-wrapper-header-outside {
+  margin-bottom: 0px;
+}
+
+.page-wrapper-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-wrapper-card {
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.page-wrapper-header {
+  position: relative;
+}
+
+.page-wrapper-title-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.page-wrapper-title-content {
+  flex: 1;
+}
+
+.page-wrapper-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.page-wrapper-content {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Debug padding - remove this in production */
+.page-wrapper-content {
+  /* Uncomment the next line to see padding visually */
+  /* background: linear-gradient(90deg, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0) 24px, rgba(255,0,0,0) calc(100% - 24px), rgba(255,0,0,0.1) 100%); */
+}
+
+/* Loading state */
+.page-wrapper-card .ant-card-loading-content > * {
+  background: #f5f5f5;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 16px;
+  }
+  
+  .page-wrapper-header-outside {
+    margin-bottom: 5px;
+  }
+  
+  .page-wrapper-header .ant-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .page-wrapper-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .page-wrapper-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .page-wrapper .ant-typography h1 {
+    font-size: 24px !important;
+  }
+  
+  .page-wrapper .ant-btn-lg {
+    font-size: 14px;
+    height: 36px;
+    padding: 6px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-wrapper {
+    padding: 8px;
+  }
+  
+  .page-wrapper-header-outside {
+    padding: 0 16px 16px !important;
+    margin-bottom: 5px;
+  }
+  
+  .page-wrapper-card .ant-card-body {
+    padding: 0 !important;
+  }
+  
+  .page-wrapper-content {
+    padding: 16px !important;
+  }
+  
+  .page-wrapper .ant-space {
+    flex-wrap: wrap;
+  }
+  
+  .page-wrapper .ant-btn {
+    margin-bottom: 8px;
+  }
+}
+
+/* Animation for page transitions */
+.page-wrapper-content {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header animation */
+.page-wrapper-header {
+  animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Breadcrumb styling */
+.page-wrapper .ant-breadcrumb {
+  font-size: 14px;
+}
+
+.page-wrapper .ant-breadcrumb a {
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.page-wrapper .ant-breadcrumb a:hover {
+  color: #1890ff;
+}
+
+/* Title styling */
+.page-wrapper .ant-typography h1 {
+  color: #262626;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Tags styling */
+.page-wrapper .ant-tag {
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 8px;
+  margin: 0;
+}
+
+/* Action buttons styling */
+.page-wrapper .ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.page-wrapper .ant-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.page-wrapper .ant-btn-lg {
+  height: 40px;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+/* Floating buttons positioning */
+.page-wrapper .ant-float-btn-group {
+  z-index: 1000;
+}
+
+/* Dark theme support */
+.page-wrapper.dark {
+  background: #141414;
+}
+
+.page-wrapper.dark .page-wrapper-card {
+  background: #1f1f1f;
+  border-color: #303030;
+}
+
+.page-wrapper.dark .ant-typography h1 {
+  color: #fff;
+}
+
+.page-wrapper.dark .ant-typography {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.page-wrapper.dark .page-wrapper-header-outside .ant-typography h1 {
+  color: #fff;
+}
+
+.page-wrapper.dark .page-wrapper-header-outside .ant-typography {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Compact mode */
+.page-wrapper.compact {
+  padding: 16px;
+}
+
+.page-wrapper.compact .page-wrapper-header {
+  padding: 16px !important;
+}
+
+.page-wrapper.compact .page-wrapper-content {
+  padding: 0 16px 16px !important;
+}
+
+.page-wrapper.compact .ant-typography h1 {
+  font-size: 24px !important;
+}
+
+/* Full width mode */
+.page-wrapper.full-width {
+  padding: 0;
+}
+
+.page-wrapper.full-width .page-wrapper-card {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* Print styles */
+@media print {
+  .page-wrapper {
+    background: white;
+    padding: 0;
+  }
+  
+  .page-wrapper .ant-float-btn-group,
+  .page-wrapper .ant-back-top {
+    display: none;
+  }
+  
+  .page-wrapper-card {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .page-wrapper .ant-btn,
+  .page-wrapper .ant-dropdown {
+    display: none;
+  }
+}
+
+/* Custom scrollbar for content */
+.page-wrapper-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.page-wrapper-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.page-wrapper-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.page-wrapper-content::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Page status indicators */
+.page-wrapper .ant-tag.status-active {
+  background: #f6ffed;
+  border-color: #b7eb8f;
+  color: #52c41a;
+}
+
+.page-wrapper .ant-tag.status-inactive {
+  background: #fff2e8;
+  border-color: #ffbb96;
+  color: #fa8c16;
+}
+
+.page-wrapper .ant-tag.status-error {
+  background: #fff2f0;
+  border-color: #ffccc7;
+  color: #ff4d4f;
+}
+
+/* Action button groups */
+.page-wrapper .ant-space-compact .ant-btn {
+  border-radius: 0;
+}
+
+.page-wrapper .ant-space-compact .ant-btn:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.page-wrapper .ant-space-compact .ant-btn:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+} 

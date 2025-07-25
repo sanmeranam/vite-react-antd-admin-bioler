@@ -1,0 +1,58 @@
+.main-layout {
+  min-height: 100vh;
+}
+
+.main-content-layout {
+  transition: margin-left 0.3s ease;
+}
+
+.main-content {
+  margin-top: 64px; /* Account for fixed header */
+}
+
+.content-wrapper {
+  position: relative;
+  min-height: calc(100vh - 152px);
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content-layout {
+    margin-left: 0 !important;
+  }
+  
+  .main-content {
+    margin-top: 64px;
+    padding: 16px !important;
+  }
+  
+  .content-wrapper {
+    padding: 16px !important;
+    min-height: calc(100vh - 120px);
+  }
+}
+
+/* Smooth transitions */
+.main-layout * {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar for content areas */
+.content-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+} 
