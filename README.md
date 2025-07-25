@@ -2,6 +2,9 @@
 
 A comprehensive, enterprise-grade SaaS application built with React, Node.js, and MongoDB. This boilerplate provides a solid foundation for multi-tenant SaaS applications with advanced features including real-time notifications, RBAC, theming, and more.
 
+<img width="759" height="412" alt="Screenshot 2025-07-25 at 11 42 25 AM" src="https://github.com/user-attachments/assets/48f757ec-9a43-410d-8aa9-cade4f6dcbb8" />
+
+
 ## 🚀 Features
 
 ### Frontend (React 19 + Vite)
